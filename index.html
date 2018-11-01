@@ -189,6 +189,26 @@
         <section>
           <section>
             <h2>Mistake 3</h2>
+            <h3>Tightly Coupled Designs</h3>
+          </section>
+          <section>
+            <p>
+              Seductive idea: building a single system to do many things will save work, "kill two
+              birds with one stone". In reality, such a system tends to have tight dependencies among
+              its parts, which requires that multiple problems be solved at once. Long feedback cycles!
+  					</p>
+          </section>
+          <section>
+            <h3>Solution</h3>
+            <p>Break systems down into smaller systems, with as few dependencies as possible, even if
+              it seems like more work.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Mistake 4</h2>
             <h3>Extreme Rationalism</h3>
           </section>
           <section>
@@ -290,9 +310,33 @@
 
         <section>
           <section>
-            <h2>Mistake 4</h2>
+            <h2>Mistake x</h2>
+            <h3>Failure to consider systems to be replaced as systems to be integrated.</h3>
+          </section>
+          <section>
+            <h3>Example: Moving from Master List Spreadsheets to XML Sync</h3>
+            <p>
+              In cases like ours, where we have no unique ID's for people's jobs, Pure automatically
+              assigns its own unique ID's to jobs:
+            </p>
+            <p>
+              autoid:{organisation-id}{job-title}{employment-type}{start-date}
+            </p>
+          </section>
+          <section>
+            <h3>Afraid I had deleted existing data!</h3>
+            <p>Did not carefully enough consider effects of a new upload on existing data.
+              One reason I didn't know about these Pure-generated job ID's. (I also don't think
+              these Pure ID schemes are documented.) Even worse, I mistakenly synced to production!
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Mistake 5</h2>
             <h3>Poor Communication</h3>
           </section>
+          <section>
             <h3>Technology is easy. People are difficult.</h3>
             <p>
               May seem easy, especially for the outgoing. But what's hard is making ourselves
@@ -302,6 +346,7 @@
               The more complex and unfamiliar the project, the more likely the need
               for difficult communication.
             </p>
+          </section>
           <section>
             <h3>Solutions</h3>
             <p>
@@ -320,10 +365,26 @@
 
         <section>
           <section>
+            <h2>Challenge: TMI</h2>
+            <h3>Too Much Information</h3>
+            <p>In all the voluminous Pure documentation, how do we find what we need?</p>
+          </section>
+          <section>
+            <h3>Solutions</h3>
+            <ul>
+              <li>Subscribe to updates to the <a href="https://doc.pure.elsevier.com/pages/viewpage.action?pageId=37685723">Confluence Pure Client Space</a>.</li>
+              <li>XSD's for organisations, persons, research outputs, etc. are in the Pure Portal under "Bulk Import". The data returned by the Pure API uses almost identical schemas.</li>
+              <li>PDF document on populating data in Pure.</li>
+            </ul>
           </section>
         </section>
 
 				<section>
+          <h1>Questions?</h1>
+        </section>
+
+				<section>
+          <h1>Thank you!</h1>
         </section>
 			</div>
 		</div>
