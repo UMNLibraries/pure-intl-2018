@@ -222,6 +222,41 @@
             <p>Some higher-level overview documentation would make this even better. I also could find no schema for the <code>changes</code> endpoint.</p>
           </section>
           <section>
+            <h3>Surprises in UMN HR Data</h3>
+            <p>OIT Data Warehouse containing data from PeopleSoft. Completely unfamiliar.</p>
+            <ul>
+              <li>No unique identifiers for people's jobs! (staff organisation relations)</li>
+              <li>No reliable way to distinguish a person's multiple jobs from each other.
+                <ul>
+                  <li>
+                    There is a position_nbr in the main "jobs" table, but no one uses it consistently.
+                  </li>
+                  <li>
+                    Some people define a job as a position in a department, which could include a series of different roles or duties (jobcodes).
+                  </li>
+                  <li>
+                    Others define roles with different jobcodes as different jobs.
+                  </li>
+                </ul>
+              </li>
+              <li>No reliable way to determine when jobs start and end.
+                <ul>
+                  <li>No common definition of "job" (see above).</li>
+                  <li>
+                    Several columns that <em>may</em> help, if not null:
+                    <ul>
+                      <li>job_entry_dt</li>
+                      <li>position_entry_dt</li>
+                      <li>last_date_worked</li>
+                      <li>effdt combined with effseq, empl_status, status_flg, and job_terminated</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Affiliate jobs (e.g., adjunct faculty) in a "person of interest" table, with very different columns than the main "jobs" table, and with even worse data entry.
+              </li>
+            </ul>
           </section>
           <section>
           </section>
